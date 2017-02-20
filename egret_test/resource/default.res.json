@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,com_close_png,com_empty_png,com_head_png,com_headFrame_png,fanngkabg_png,touming_png,bg1_png,bg2_png,dlubj_jpg,login_btn_png,login_logo_png,login_text_png,meinvz_png,11111_png,pf_btBg_png,pf_btnAdd_png,pf_btnCreate_png,pf_btnEnt_png,pf_BtnIn_png,pf_fkBg_png,pf_headBg_png,pf_iconGM_png,pf_iconHelp_png,pf_iconRank_png,pf_iconRecord_png,pf_iconSet_png,pf_iconShare_png,pf_iconStore_png,pf_MsgBg1_png,pf_MsgBg2_png,sys_TTF,set_backgroud_png,set_close_png,set_open_png,set_out_png",
 			"name": "preload"
 		}
 	],
@@ -132,9 +132,184 @@
 			"name": "egret_icon_png"
 		},
 		{
-			"name": "description_json",
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
+		},
+		{
+			"url": "image/fk_common/com_close.png",
+			"type": "image",
+			"name": "com_close_png"
+		},
+		{
+			"url": "image/fk_common/com_empty.png",
+			"type": "image",
+			"name": "com_empty_png"
+		},
+		{
+			"url": "image/fk_common/com_head.png",
+			"type": "image",
+			"name": "com_head_png"
+		},
+		{
+			"url": "image/fk_common/com_headFrame.png",
+			"type": "image",
+			"name": "com_headFrame_png"
+		},
+		{
+			"url": "image/fk_common/fanngkabg.png",
+			"type": "image",
+			"name": "fanngkabg_png"
+		},
+		{
+			"url": "image/fk_common/touming.png",
+			"type": "image",
+			"name": "touming_png"
+		},
+		{
+			"url": "image/fk_loginUI/bg1.png",
+			"type": "image",
+			"name": "bg1_png"
+		},
+		{
+			"url": "image/fk_loginUI/bg2.png",
+			"type": "image",
+			"name": "bg2_png"
+		},
+		{
+			"url": "image/fk_loginUI/dlubj.jpg",
+			"type": "image",
+			"name": "dlubj_jpg"
+		},
+		{
+			"url": "image/fk_loginUI/login_btn.png",
+			"type": "image",
+			"name": "login_btn_png"
+		},
+		{
+			"url": "image/fk_loginUI/login_logo.png",
+			"type": "image",
+			"name": "login_logo_png"
+		},
+		{
+			"url": "image/fk_loginUI/login_text.png",
+			"type": "image",
+			"name": "login_text_png"
+		},
+		{
+			"url": "image/fk_loginUI/meinvz.png",
+			"type": "image",
+			"name": "meinvz_png"
+		},
+		{
+			"url": "image/fk_platformUI/11111.png",
+			"type": "image",
+			"name": "11111_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_btBg.png",
+			"type": "image",
+			"name": "pf_btBg_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_btnAdd.png",
+			"type": "image",
+			"name": "pf_btnAdd_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_btnCreate.png",
+			"type": "image",
+			"name": "pf_btnCreate_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_btnEnt.png",
+			"type": "image",
+			"name": "pf_btnEnt_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_BtnIn.png",
+			"type": "image",
+			"name": "pf_BtnIn_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_fkBg.png",
+			"type": "image",
+			"name": "pf_fkBg_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_headBg.png",
+			"type": "image",
+			"name": "pf_headBg_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconHelp.png",
+			"type": "image",
+			"name": "pf_iconHelp_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconRank.png",
+			"type": "image",
+			"name": "pf_iconRank_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconGM.png",
+			"type": "image",
+			"name": "pf_iconGM_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconRecord.png",
+			"type": "image",
+			"name": "pf_iconRecord_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconSet.png",
+			"type": "image",
+			"name": "pf_iconSet_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconShare.png",
+			"type": "image",
+			"name": "pf_iconShare_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_iconStore.png",
+			"type": "image",
+			"name": "pf_iconStore_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_MsgBg2.png",
+			"type": "image",
+			"name": "pf_MsgBg2_png"
+		},
+		{
+			"url": "image/fk_platformUI/pf_MsgBg1.png",
+			"type": "image",
+			"name": "pf_MsgBg1_png"
+		},
+		{
+			"url": "image/fk_common/sys.TTF",
+			"type": "bin",
+			"name": "sys_TTF"
+		},
+		{
+			"url": "image/fk_settingUI/set_backgroud.png",
+			"type": "image",
+			"name": "set_backgroud_png"
+		},
+		{
+			"url": "image/fk_settingUI/set_close.png",
+			"type": "image",
+			"name": "set_close_png"
+		},
+		{
+			"url": "image/fk_settingUI/set_open.png",
+			"type": "image",
+			"name": "set_open_png"
+		},
+		{
+			"url": "image/fk_settingUI/set_out.png",
+			"type": "image",
+			"name": "set_out_png"
 		}
 	]
 }

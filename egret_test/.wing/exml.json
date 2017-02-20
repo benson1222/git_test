@@ -1,0 +1,17 @@
+{
+    "15a5b20d809": {
+        "path": "..\\resource\\image\\FKLoginUI.ts",
+        "class": "FKLoginUI",
+        "parentPath": ""
+    },
+    "15a5b597f2e": {
+        "path": "..\\resource\\image\\fk_platformUI\\FKPlatform.ts",
+        "class": "FKPlatform",
+        "parentPath": ""
+    },
+    "15a5b7c604f": {
+        "path": "..\\resource\\image\\fk_settingUI\\FKSettingUI.ts",
+        "class": "FKSettingUI",
+        "parentPath": ""
+    }
+}
