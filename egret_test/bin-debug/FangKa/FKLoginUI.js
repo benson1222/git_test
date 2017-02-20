@@ -11,7 +11,8 @@ var FKLoginUI = (function (_super) {
     function FKLoginUI() {
         var _this = _super.call(this) || this;
         _this.exml_path = "resource/image/fk_loginUI/FKLoginUI.exml";
-        _this.skinName = "resource/image/fk_loginUI/FKLoginUI.exml";
+        _this.loginCallback = null;
+        _this.skinName = _this.exml_path;
         return _this;
     }
     FKLoginUI.prototype.partAdded = function (partName, instance) {
@@ -28,16 +29,20 @@ var FKLoginUI = (function (_super) {
      * Click the button
      */
     FKLoginUI.prototype.onButtonBeginClick = function (e) {
-        this.Btn_Login.$setScaleX(0.7);
-        this.Btn_Login.$setScaleY(0.7);
+        this.Btn_Login.$setScaleX(0.85);
+        this.Btn_Login.$setScaleY(0.85);
     };
     FKLoginUI.prototype.onButtonEndClick = function (e) {
         this.Btn_Login.$setScaleX(1);
         this.Btn_Login.$setScaleY(1);
+        this.loginCallback();
     };
     FKLoginUI.prototype.onButtonOutClick = function (e) {
         this.Btn_Login.$setScaleX(1);
         this.Btn_Login.$setScaleY(1);
+    };
+    FKLoginUI.prototype.addLoginCallBack = function (callback) {
+        this.loginCallback = callback;
     };
     return FKLoginUI;
 }(eui.Component));

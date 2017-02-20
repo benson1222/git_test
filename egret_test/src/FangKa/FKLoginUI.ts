@@ -2,9 +2,10 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 	
 	private exml_path: string = "resource/image/fk_loginUI/FKLoginUI.exml";
 	private Btn_Login: eui.Button;
+	private loginCallback: Function = null;
 	public constructor() {
 		super();
-		this.skinName = "resource/image/fk_loginUI/FKLoginUI.exml";
+		this.skinName = this.exml_path;
 	}
 
 	protected partAdded(partName:string,instance:any):void
@@ -33,9 +34,14 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 	private onButtonEndClick(e: egret.TouchEvent) {
         this.Btn_Login.$setScaleX(1);
 		this.Btn_Login.$setScaleY(1);
+		this.loginCallback();
     }
 	private onButtonOutClick(e: egret.TouchEvent) {
         this.Btn_Login.$setScaleX(1);
 		this.Btn_Login.$setScaleY(1);
     }
+
+	public addLoginCallBack(callback: Function){
+		this.loginCallback = callback;
+	}
 }

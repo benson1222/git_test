@@ -9,13 +9,28 @@ var __extends = (this && this.__extends) || function (d, b) {
 var FKPlatform = (function (_super) {
     __extends(FKPlatform, _super);
     function FKPlatform() {
-        return _super.call(this) || this;
+        var _this = _super.call(this) || this;
+        _this.btnSet = null;
+        _this.skinName = "resource/image/fk_platformUI/FKPlatform.exml";
+        return _this;
     }
     FKPlatform.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
     FKPlatform.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
+        this.btnSet.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+    };
+    /**
+     * 点击按钮
+     * Click the button
+     */
+    FKPlatform.prototype.onButtonClick = function (e) {
+        var setting = new FKSettingUI();
+        setting.addOutCallBack(this.outCallBack);
+        this.addChild(setting);
+    };
+    FKPlatform.prototype.outCallBack = function () {
     };
     return FKPlatform;
 }(eui.Component));
