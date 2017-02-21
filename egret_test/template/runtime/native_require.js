@@ -8,13 +8,16 @@ var game_file_list = [
 	"libs/modules/eui/eui.js",
 	"libs/modules/tween/tween.js",
 	"polyfill/promise.js",
+	"bin-debug/LoadingUI.js",
 	"bin-debug/AssetAdapter.js",
-	"bin-debug/Common/Director.js",
 	"bin-debug/FangKa/FKLoginUI.js",
 	"bin-debug/FangKa/FKPlatform.js",
 	"bin-debug/FangKa/FKSettingUI.js",
-	"bin-debug/LoadingUI.js",
+	"bin-debug/Common/Director.js",
 	"bin-debug/Main.js",
+	"bin-debug/Net/Http/HttpRequest.js",
+	"bin-debug/Net/Http/HttpRequestManage.js",
+	"bin-debug/Net/NetProtocol/BaseCommand.js",
 	"bin-debug/ThemeAdapter.js",
 	//----auto game_file_list end----
 ];

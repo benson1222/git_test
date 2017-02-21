@@ -3,6 +3,7 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 };
 var Director = (function () {
     function Director() {
+        this.runSceneIndex = 1;
         this.gameLayer = null;
     }
     Director.getInstance = function () {
@@ -20,7 +21,11 @@ var Director = (function () {
         if (this.gameLayer != null && layer != null) {
             this.gameLayer.removeChildren();
             this.gameLayer.addChild(layer);
+            this.gameLayer.setChildIndex(layer, this.runSceneIndex);
         }
+    };
+    Director.prototype.runScene = function () {
+        return this.gameLayer.getChildAt(this.runSceneIndex);
     };
     return Director;
 }());
