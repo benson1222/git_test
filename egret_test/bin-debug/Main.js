@@ -140,9 +140,11 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.startCreateScene = function () {
+        Director.getInstance().iniWithMain(this);
         var login = new FKLoginUI();
-        login.addLoginCallBack(this.loginCallBack);
-        this.addChild(login);
+        //login.addLoginCallBack(this.loginCallBack);
+        //this.addChild(login);
+        Director.getInstance().repleaceScene(login);
         // let sky = this.createBitmapByName("bg_jpg");
         // this.addChild(sky);
         // let stageW = this.stage.stageWidth;

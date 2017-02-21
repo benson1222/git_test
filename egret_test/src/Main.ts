@@ -134,9 +134,12 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected startCreateScene(): void {
+        Director.getInstance().iniWithMain(this);
         let login = new FKLoginUI();
-        login.addLoginCallBack(this.loginCallBack);
-        this.addChild(login);
+        //login.addLoginCallBack(this.loginCallBack);
+        //this.addChild(login);
+        Director.getInstance().repleaceScene(login);
+
         // let sky = this.createBitmapByName("bg_jpg");
         // this.addChild(sky);
         // let stageW = this.stage.stageWidth;

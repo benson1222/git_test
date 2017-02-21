@@ -32,7 +32,9 @@ var FKSettingUI = (function (_super) {
         this.parent.removeChild(this);
     };
     FKSettingUI.prototype.onButtonClick = function (e) {
-        this.outCallback();
+        var login = new FKLoginUI();
+        Director.getInstance().repleaceScene(login);
+        //this.outCallback();
     };
     FKSettingUI.prototype.addOutCallBack = function (callback) {
         this.outCallback = callback;

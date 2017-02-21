@@ -31,7 +31,9 @@ class FKSettingUI extends eui.Component implements  eui.UIComponent {
 		this.parent.removeChild(this);
     }
     private onButtonClick(e: egret.TouchEvent) {
-		this.outCallback();
+		let login = new FKLoginUI();
+        Director.getInstance().repleaceScene(login);
+		//this.outCallback();
     }
 	public addOutCallBack(callback: Function){
 		this.outCallback = callback;

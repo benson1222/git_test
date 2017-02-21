@@ -35,7 +35,9 @@ var FKLoginUI = (function (_super) {
     FKLoginUI.prototype.onButtonEndClick = function (e) {
         this.Btn_Login.$setScaleX(1);
         this.Btn_Login.$setScaleY(1);
-        this.loginCallback();
+        var platform = new FKPlatform();
+        Director.getInstance().repleaceScene(platform);
+        //		this.loginCallback();
     };
     FKLoginUI.prototype.onButtonOutClick = function (e) {
         this.Btn_Login.$setScaleX(1);

@@ -9,6 +9,7 @@ var game_file_list = [
 	"libs/modules/tween/tween.js",
 	"polyfill/promise.js",
 	"bin-debug/AssetAdapter.js",
+	"bin-debug/Common/Director.js",
 	"bin-debug/FangKa/FKLoginUI.js",
 	"bin-debug/FangKa/FKPlatform.js",
 	"bin-debug/FangKa/FKSettingUI.js",
