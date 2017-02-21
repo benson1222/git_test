@@ -3,32 +3,32 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 };
 var BaseCommand = (function () {
     function BaseCommand() {
-        this.WebServerUrl = "p.6hgame.com"; //http请求地址
-        this.SigleServerAddress = "112.74.73.102"; //总入口接口地址
-        this.ApiServerUrl = "p.6hgame.com";
-        this.PlatformAddress = "";
-        this.PlatformPort = -1;
     }
-    BaseCommand.prototype.gameSecrectKey = function () {
+    BaseCommand.gameSecrectKey = function () {
         return 20160329;
     };
-    BaseCommand.prototype.getSigleServerAddress = function () {
+    BaseCommand.getSigleServerAddress = function () {
         return this.SigleServerAddress;
     };
-    BaseCommand.prototype.getSigleServerPort = function () {
+    BaseCommand.getSigleServerPort = function () {
         return 13025;
     };
-    BaseCommand.prototype.getPlatformServerAddress = function () {
+    BaseCommand.getPlatformServerAddress = function () {
         return this.PlatformAddress;
     };
-    BaseCommand.prototype.getPlatformServerPort = function () {
+    BaseCommand.getPlatformServerPort = function () {
         return this.PlatformPort;
     };
     //http请求地址
-    BaseCommand.prototype.getWebServerUrl = function () {
+    BaseCommand.getWebServerUrl = function () {
         return this.WebServerUrl;
     };
     return BaseCommand;
 }());
+BaseCommand.WebServerUrl = "p.6hgame.com"; //http请求地址
+BaseCommand.SigleServerAddress = "112.74.73.102"; //总入口接口地址
+BaseCommand.ApiServerUrl = "p.6hgame.com";
+BaseCommand.PlatformAddress = "";
+BaseCommand.PlatformPort = -1;
 __reflect(BaseCommand.prototype, "BaseCommand");
 //# sourceMappingURL=BaseCommand.js.map

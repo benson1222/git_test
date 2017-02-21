@@ -34,8 +34,11 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 	private onButtonEndClick(e: egret.TouchEvent) {
         this.Btn_Login.$setScaleX(1);
 		this.Btn_Login.$setScaleY(1);
-		let platform = new FKPlatform();
-		Director.getInstance().repleaceScene(platform);
+		let socket:SocketManage = new SocketManage();
+		socket.connectAddress(BaseCommand.getSigleServerAddress(),BaseCommand.getSigleServerPort());
+		// let platform = new FKPlatform();
+		// Director.getInstance().repleaceScene(platform);
+
 //		this.loginCallback();
     }
 	private onButtonOutClick(e: egret.TouchEvent) {

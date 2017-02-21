@@ -35,8 +35,10 @@ var FKLoginUI = (function (_super) {
     FKLoginUI.prototype.onButtonEndClick = function (e) {
         this.Btn_Login.$setScaleX(1);
         this.Btn_Login.$setScaleY(1);
-        var platform = new FKPlatform();
-        Director.getInstance().repleaceScene(platform);
+        var socket = new SocketManage();
+        socket.connectAddress(BaseCommand.getSigleServerAddress(), BaseCommand.getSigleServerPort());
+        // let platform = new FKPlatform();
+        // Director.getInstance().repleaceScene(platform);
         //		this.loginCallback();
     };
     FKLoginUI.prototype.onButtonOutClick = function (e) {
