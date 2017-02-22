@@ -6,8 +6,22 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 	public constructor() {
 		super();
 		this.skinName = this.exml_path;
+		this.testWeixinapi();
 	}
 
+	private testWeixinapi(){
+		var bodyConfig: BodyConfig = new BodyConfig();
+		bodyConfig.appId = "wx3a91423d85d71666";//"此处填写公共平台appID，未认证的ID将不能使用自定义分享等接口，请联系微信官方获取";
+		bodyConfig.debug = true;
+		/// ... 其他的配置属性赋值
+		/// 通过config接口注入权限验证配置
+		if(wx) {
+			wx.config(bodyConfig);
+			wx.ready(function() {
+			/// 在这里调用微信相关功能的 API
+			});
+		}
+	}
 	protected partAdded(partName:string,instance:any):void
 	{
 		super.partAdded(partName,instance);

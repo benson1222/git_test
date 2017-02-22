@@ -5,27 +5,13 @@ var game_file_list = [
 	"libs/modules/egret/egret.js",
 	"libs/modules/egret/egret.native.js",
 	"libs/modules/res/res.js",
-	"libs/modules/eui/eui.js",
-	"libs/modules/tween/tween.js",
-	"libs/modules/socket/socket.js",
 	"libs/modules/weixinapi/weixinapi.js",
-	"polyfill/promise.js",
-	"bin-debug/Common/Director.js",
-	"bin-debug/Main.js",
-	"bin-debug/FangKa/FKLoginUI.js",
-	"bin-debug/FangKa/FKPlatform.js",
-	"bin-debug/FangKa/FKSettingUI.js",
 	"bin-debug/LoadingUI.js",
-	"bin-debug/AssetAdapter.js",
-	"bin-debug/Net/Http/HttpRequest.js",
-	"bin-debug/Net/Http/HttpRequestManage.js",
-	"bin-debug/Net/NetProtocol/BaseCommand.js",
-	"bin-debug/Net/Socket/SocketManage.js",
-	"bin-debug/ThemeAdapter.js",
+	"bin-debug/Main.js",
 	//----auto game_file_list end----
 ];
 
-var window = this;
+var window = {};
 
 egret_native.setSearchPaths([""]);
 
@@ -37,13 +23,8 @@ egret_native.requireFiles = function () {
 };
 
 egret_native.egretInit = function () {
-    if(egret_native.featureEnable) {
-        //控制一些优化方案是否开启
-        var result = egret_native.featureEnable({
-            
-        });
-    }
     egret_native.requireFiles();
+    egret.TextField.default_fontFamily = "/system/fonts/DroidSansFallback.ttf";
     //egret.dom为空实现
     egret.dom = {};
     egret.dom.drawAsCanvas = function () {
@@ -56,12 +37,12 @@ egret_native.egretStart = function () {
         //----auto option start----
 		entryClassName: "Main",
 		frameRate: 30,
-		scaleMode: "fixedWidth",
-		contentWidth: 1334,
-		contentHeight: 750,
+		scaleMode: "showAll",
+		contentWidth: 480,
+		contentHeight: 800,
 		showPaintRect: false,
 		showFPS: false,
-		fpsStyles: "x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9",
+		fpsStyles: "x:0,y:0,size:30",
 		showLog: false,
 		logFilter: "",
 		maxTouches: 2,
@@ -71,6 +52,6 @@ egret_native.egretStart = function () {
 
     egret.native.NativePlayer.option = option;
     egret.runEgret();
-    egret_native.Label.createLabel("/system/fonts/DroidSansFallback.ttf", 20, "", 0);
+    egret_native.Label.createLabel(egret.TextField.default_fontFamily, 20, "", 0);
     egret_native.EGTView.preSetOffScreenBufferEnable(true);
 };

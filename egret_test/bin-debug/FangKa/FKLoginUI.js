@@ -13,8 +13,22 @@ var FKLoginUI = (function (_super) {
         _this.exml_path = "resource/image/fk_loginUI/FKLoginUI.exml";
         _this.loginCallback = null;
         _this.skinName = _this.exml_path;
+        _this.testWeixinapi();
         return _this;
     }
+    FKLoginUI.prototype.testWeixinapi = function () {
+        var bodyConfig = new BodyConfig();
+        bodyConfig.appId = "wx3a91423d85d71666"; //"此处填写公共平台appID，未认证的ID将不能使用自定义分享等接口，请联系微信官方获取";
+        bodyConfig.debug = true;
+        /// ... 其他的配置属性赋值
+        /// 通过config接口注入权限验证配置
+        if (wx) {
+            wx.config(bodyConfig);
+            wx.ready(function () {
+                /// 在这里调用微信相关功能的 API
+            });
+        }
+    };
     FKLoginUI.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };
