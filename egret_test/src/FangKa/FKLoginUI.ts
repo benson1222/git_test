@@ -2,13 +2,18 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 	
 	private exml_path: string = "resource/image/fk_loginUI/FKLoginUI.exml";
 	private Btn_Login: eui.Button;
+	private Btn_send:eui.Button;
 	private loginCallback: Function = null;
 	public constructor() {
 		super();
 		this.skinName = this.exml_path;
-		this.testWeixinapi();
+		//this.testWeixinapi();
 	}
 
+	private testScroll(){
+		let scroll:ScrollerDemo = new ScrollerDemo();
+		this.addChild(scroll);
+	}
 	private testWeixinapi(){
 		var bodyConfig: BodyConfig = new BodyConfig();
 		bodyConfig.appId = "wx3a91423d85d71666";//"此处填写公共平台appID，未认证的ID将不能使用自定义分享等接口，请联系微信官方获取";
@@ -35,8 +40,14 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 		this.Btn_Login.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onButtonBeginClick, this);
 		this.Btn_Login.addEventListener(egret.TouchEvent.TOUCH_END, this.onButtonEndClick, this);
 		this.Btn_Login.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this.onButtonOutClick, this);
+
+		this.Btn_send.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+
 	}
 	
+	private onButtonClick(e: egret.TouchEvent) {
+
+	}
 	/**
      * 点击按钮
      * Click the button
@@ -48,8 +59,26 @@ class FKLoginUI extends eui.Component implements  eui.UIComponent {
 	private onButtonEndClick(e: egret.TouchEvent) {
         this.Btn_Login.$setScaleX(1);
 		this.Btn_Login.$setScaleY(1);
-		let socket:SocketManage = new SocketManage();
-		socket.connectAddress(BaseCommand.getSigleServerAddress(),BaseCommand.getSigleServerPort());
+
+		let _loginData = new NetLoginData();
+		_loginData.name = "test123";
+		_loginData.password = "123456";
+
+		let netHead = new NetMessageHead();
+		netHead.bMainID = "100";
+		netHead.bAssistantID = "1";
+		//netHead.bObject = _loginData;
+		let jsonStr = JSON.stringify(netHead);
+		console.log("json="+jsonStr);
+		NetMessageLogic.getInstance().sendData(jsonStr);
+		// let userLogin:FKUserLoginUI = new FKUserLoginUI();
+		// this.addChild(userLogin);
+		//this.testScroll();
+
+		//let socket:WebSocketDemo = new WebSocketDemo();
+		
+		// let socket:SocketManage = new SocketManage();
+		// socket.connectAddress(BaseCommand.getSigleServerAddress(),BaseCommand.getSigleServerPort());
 		// let platform = new FKPlatform();
 		// Director.getInstance().repleaceScene(platform);
 

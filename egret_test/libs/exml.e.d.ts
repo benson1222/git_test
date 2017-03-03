@@ -52,6 +52,8 @@ declare module skins{
 }
 declare class FKLoginUISkin extends eui.Skin{
 }
+declare class FKUserLoginUI extends eui.Skin{
+}
 declare class FKPlatformSkin extends eui.Skin{
 }
 declare class FKSettingUISkin extends eui.Skin{

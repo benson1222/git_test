@@ -140,6 +140,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.startCreateScene = function () {
+        NetMessageLogic.getInstance().initNetLogic();
         Director.getInstance().iniWithMain(this);
         var login = new FKLoginUI();
         //login.addLoginCallBack(this.loginCallBack);

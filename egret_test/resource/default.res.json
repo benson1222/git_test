@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,com_close_png,com_empty_png,com_head_png,com_headFrame_png,fanngkabg_png,touming_png,bg1_png,bg2_png,dlubj_jpg,login_btn_png,login_logo_png,login_text_png,meinvz_png,11111_png,pf_btBg_png,pf_btnAdd_png,pf_btnCreate_png,pf_btnEnt_png,pf_BtnIn_png,pf_fkBg_png,pf_headBg_png,pf_iconGM_png,pf_iconHelp_png,pf_iconRank_png,pf_iconRecord_png,pf_iconSet_png,pf_iconShare_png,pf_iconStore_png,pf_MsgBg1_png,pf_MsgBg2_png,sys_TTF,set_backgroud_png,set_close_png,set_open_png,set_out_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,com_close_png,com_empty_png,com_head_png,com_headFrame_png,fanngkabg_png,touming_png,bg1_png,bg2_png,dlubj_jpg,login_btn_png,login_logo_png,login_text_png,meinvz_png,11111_png,pf_btBg_png,pf_btnAdd_png,pf_btnCreate_png,pf_btnEnt_png,pf_BtnIn_png,pf_fkBg_png,pf_headBg_png,pf_iconGM_png,pf_iconHelp_png,pf_iconRank_png,pf_iconRecord_png,pf_iconSet_png,pf_iconShare_png,pf_iconStore_png,pf_MsgBg1_png,pf_MsgBg2_png,sys_TTF,set_backgroud_png,set_close_png,set_open_png,set_out_png,bg_png,edit_png,login_png,phoneBtn_png,loginBg_png",
 			"name": "preload"
 		}
 	],
@@ -310,6 +310,31 @@
 			"url": "image/fk_settingUI/set_out.png",
 			"type": "image",
 			"name": "set_out_png"
+		},
+		{
+			"name": "bg_png",
+			"type": "image",
+			"url": "image/test/bg.png"
+		},
+		{
+			"name": "edit_png",
+			"type": "image",
+			"url": "image/fk_loginUI/edit.png"
+		},
+		{
+			"name": "login_png",
+			"type": "image",
+			"url": "image/fk_loginUI/login.png"
+		},
+		{
+			"name": "phoneBtn_png",
+			"type": "image",
+			"url": "image/fk_loginUI/phoneBtn.png"
+		},
+		{
+			"name": "loginBg_png",
+			"type": "image",
+			"url": "image/fk_loginUI/loginBg.png"
 		}
 	]
 }

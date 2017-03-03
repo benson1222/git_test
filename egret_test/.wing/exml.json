@@ -13,5 +13,10 @@
         "path": "..\\resource\\image\\fk_settingUI\\FKSettingUI.ts",
         "class": "FKSettingUI",
         "parentPath": ""
+    },
+    "15a83e80527": {
+        "path": "FangKa\\FKUserLoginUI.ts",
+        "class": "FKUserLoginUI",
+        "parentPath": ""
     }
 }

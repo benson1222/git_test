@@ -33,6 +33,7 @@
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
     "resource/image/fk_loginUI/FKLoginUI.exml",
+    "resource/image/fk_loginUI/FKUserLoginUI.exml",
     "resource/image/fk_platformUI/FKPlatform.exml",
     "resource/image/fk_settingUI/FKSettingUI.exml"
   ]

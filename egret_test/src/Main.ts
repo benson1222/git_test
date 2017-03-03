@@ -134,6 +134,7 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected startCreateScene(): void {
+        NetMessageLogic.getInstance().initNetLogic();
         Director.getInstance().iniWithMain(this);
         let login = new FKLoginUI();
         //login.addLoginCallBack(this.loginCallBack);

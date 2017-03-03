@@ -13,9 +13,13 @@ var FKLoginUI = (function (_super) {
         _this.exml_path = "resource/image/fk_loginUI/FKLoginUI.exml";
         _this.loginCallback = null;
         _this.skinName = _this.exml_path;
-        _this.testWeixinapi();
         return _this;
+        //this.testWeixinapi();
     }
+    FKLoginUI.prototype.testScroll = function () {
+        var scroll = new ScrollerDemo();
+        this.addChild(scroll);
+    };
     FKLoginUI.prototype.testWeixinapi = function () {
         var bodyConfig = new BodyConfig();
         bodyConfig.appId = "wx3a91423d85d71666"; //"此处填写公共平台appID，未认证的ID将不能使用自定义分享等接口，请联系微信官方获取";
@@ -37,6 +41,9 @@ var FKLoginUI = (function (_super) {
         this.Btn_Login.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onButtonBeginClick, this);
         this.Btn_Login.addEventListener(egret.TouchEvent.TOUCH_END, this.onButtonEndClick, this);
         this.Btn_Login.addEventListener(egret.TouchEvent.TOUCH_RELEASE_OUTSIDE, this.onButtonOutClick, this);
+        this.Btn_send.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
+    };
+    FKLoginUI.prototype.onButtonClick = function (e) {
     };
     /**
      * 点击按钮
@@ -49,8 +56,22 @@ var FKLoginUI = (function (_super) {
     FKLoginUI.prototype.onButtonEndClick = function (e) {
         this.Btn_Login.$setScaleX(1);
         this.Btn_Login.$setScaleY(1);
-        var socket = new SocketManage();
-        socket.connectAddress(BaseCommand.getSigleServerAddress(), BaseCommand.getSigleServerPort());
+        var _loginData = new NetLoginData();
+        _loginData.name = "test123";
+        _loginData.password = "123456";
+        var netHead = new NetMessageHead();
+        netHead.bMainID = "100";
+        netHead.bAssistantID = "1";
+        //netHead.bObject = _loginData;
+        var jsonStr = JSON.stringify(netHead);
+        console.log("json=" + jsonStr);
+        NetMessageLogic.getInstance().sendData(jsonStr);
+        // let userLogin:FKUserLoginUI = new FKUserLoginUI();
+        // this.addChild(userLogin);
+        //this.testScroll();
+        //let socket:WebSocketDemo = new WebSocketDemo();
+        // let socket:SocketManage = new SocketManage();
+        // socket.connectAddress(BaseCommand.getSigleServerAddress(),BaseCommand.getSigleServerPort());
         // let platform = new FKPlatform();
         // Director.getInstance().repleaceScene(platform);
         //		this.loginCallback();
